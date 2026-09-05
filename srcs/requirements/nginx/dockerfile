@@ -1,0 +1,9 @@
+FROM nginx:bookworm-slim
+
+RUN apt-get update && apt-get install -y nginx openssl && rm -rf var/lib/apt/lists/*
+COPY conf/nginx.conf /etc/nginx/sites-enabled/default
+COPY tols/gen_cert.sh /usr/local/bin/gen_cert.sh
+ENTRYPOINT {"/usr/local/bin/entrypoint.sh"}
+
+
+
