@@ -42,15 +42,15 @@ volumes:
   db_data:
     driver: local
     driver_opts:
-     type: none
-    o: bind
-    device: /home/jait-ame/data/mariadb
+      type: none
+      o: bind
+      device: /home/jait-ame/data/mariadb
   wp_data:
     driver: local
     driver_opts:
-    type: none
-    o: bind
-    device: /home/jait-ame/data/wordpress
+      type: none
+      o: bind
+      device: /home/jait-ame/data/wordpress
 
 networks:
   inception:
